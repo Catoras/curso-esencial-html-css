@@ -9,22 +9,26 @@
   <body>
     <header>
       <nav>
-        <p>Setup</p>
-        <ol>
-          <li><a href="#google-chrome">Google Chrome</a></li>
-          <li><a href="#vsc">Visual Studio Chrome</a></li>
-          <li><a href="#figma">Figma</a></li>
-          <li><a href="#github">GitHub</a></li>
-        </ol>
-        <p>Conceptos esenciales del Desarrollo Web</p>
-        <ul>
-          <li><a href="#html">HTML</a></li>
-          <li><a href="#etiquetas">Etiquetas</a></li>
-          <li><a href="#dom">DOM</a></li>
-          <li><a href="#semantica">Semántica</a></li>
-          <li><a href="#atributos">Atributos</a></li>
-          <li><a href="#css">CSS</a></li>
-        </ul>
+        <details open>
+          <summary>Setup</summary>
+          <ol>
+            <li><a href="#google-chrome">Google Chrome</a></li>
+            <li><a href="#vsc">Visual Studio Chrome</a></li>
+            <li><a href="#figma">Figma</a></li>
+            <li><a href="#github">GitHub</a></li>
+          </ol>
+        </details>
+        <details>
+          <summary>Conceptos esenciales del Desarrollo Web<</summary>
+          <ul>
+            <li><a href="#html">HTML</a></li>
+            <li><a href="#etiquetas">Etiquetas</a></li>
+            <li><a href="#dom">DOM</a></li>
+            <li><a href="#semantica">Semántica</a></li>
+            <li><a href="#atributos">Atributos</a></li>
+            <li><a href="#css">CSS</a></li>
+          </ul>
+        </details>
       </nav>
     </header>
     <h1>Curso esencial de HTML y CSS</h1>
@@ -182,5 +186,16 @@
       Si tienes alguna pregunta escríbeme a
       <a href="mailto:me@leonidasesteban.com">me@leonidasesteban.com</a>
     </p>
+    <script>
+      const $detailsList = document.querySelectorAll("details");
+      $detailsList.forEach(($details) => {
+        $details.querySelector("summary").addEventListener("click", expand);
+      });
+      function expand() {
+        $detailsList.forEach(($details) => {
+          $details.removeAttribute("open");
+        });
+      }
+    </script>
   </body>
 </html>
