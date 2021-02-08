@@ -1,0 +1,82 @@
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #a5a3a5;
+  --primary-background: #251f24;
+  --secondary-background: #3a3539;
+}
+body {
+  background-color: var(--primary-background);
+  color: var(--primary-color);
+  font-family: "Nunito", system-ui, sans-serif;
+  margin: 0px;
+}
+header {
+  font-size: 0.875em;
+}
+header li {
+  color: var(--secondary-color);
+}
+header a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+header a:hover {
+  color: var(--primary-color);
+}
+h1 {
+  font-size: 4em;
+  font-weight: 700;
+  margin: 64px 0 16px;
+}
+h2 {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin: 40px 0;
+}
+h3 {
+  font-size: 2em;
+  font-weight: 600;
+  counter-increment: titleList;
+  margin: 16px 0;
+}
+p {
+  font-size: 1.0625em;
+  margin: 16px 0;
+}
+pre {
+  background-color: var(--secondary-background);
+}
+hr {
+  margin: 40px 0;
+}
+blockquote {
+  background-color: var(--secondary-background);
+  margin: 80px 0 63px;
+}
+li {
+  margin: 16px 0;
+}
+.hero {
+  height: 350px;
+  background: linear-gradient(96.07deg, #314755 30.63%, #26a0da 102.18%);
+}
+.content_setup h3::before {
+  content: counter(titleList) ". ";
+}
+.content_setup img {
+  display: block;
+  margin: 40px 0 16px;
+}
+.content_concepts img {
+  display: block;
+  margin: 16px 0 40px;
+}
+.section-content {
+  margin: 40px 0 164px;
+}
+.section-content:last-child {
+  margin-bottom: 0px;
+}
+::selection {
+  background: #00a2e7; /*Logo Nightwing*/
+}
